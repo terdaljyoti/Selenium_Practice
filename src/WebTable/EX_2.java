@@ -16,6 +16,8 @@ public class EX_2
 		int RowCount = driver.findElements(By.xpath("//table[@class='dataTable']//tr")).size();
 		System.out.println(RowCount);
 		
+		String value = driver.findElement(By.xpath("(//table)[2]//tr[12]//td[4]")).getText();
+		System.out.println(value);
 	}
 
 }

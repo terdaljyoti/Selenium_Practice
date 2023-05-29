@@ -16,11 +16,13 @@ public class sort_Month_ListBox
 	{
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.facebook.com/");
-		driver.findElement(By.xpath("//a[contains(@class,'selected _51sy')]")).click();
-		
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//a[contains(@class,'selected _51sy')]")).click();
+		driver.findElement(By.xpath("(//form//div)[11]/a")).click();
 		Thread.sleep(3000);
 		WebElement month = driver.findElement(By.xpath("//select[@id='month']"));
 		Select s1=new Select(month);
+		Thread.sleep(3000);
 		ArrayList<String> ar=new ArrayList<String>();
 		List<WebElement> List = s1.getOptions();
 		
